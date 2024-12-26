@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15   # Use the official PostgreSQL image
+    ports:
+      - "5450:5432"      # Map port 5450 on the host to 5432 in the container
+    environment:
+      POSTGRES_DB: ${DB_NAME}       # Name of the database
+      POSTGRES_USER: ${DB_USERNAME}         # Username for the database
+      POSTGRES_PASSWORD: ${DB_PASSWORD} # Password for the database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persist database data
+
+volumes:
+  postgres_data:
