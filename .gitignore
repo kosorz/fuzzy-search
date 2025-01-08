@@ -29,10 +29,10 @@ dist/
 .DS_Store
 
 # Environment variables
-.env*
+.example.env
 
 package-lock.json
 yarn.lock
 
 node_modules
-.env
+.example.env

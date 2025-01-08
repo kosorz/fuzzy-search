@@ -9,6 +9,7 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "noImplicitAny": true,
+    "skipLibCheck": true,
     "removeComments": true,
     "outDir": "dist",
     "baseUrl": ".",

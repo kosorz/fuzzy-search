@@ -1,5 +1,5 @@
 {
-  "name": "assignment solution",
+  "name": "assignment-solution",
   "version": "1.0.0",
   "description": "assigment solution",
   "dependencies": {
@@ -7,6 +7,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.18.3",
     "fs": "^0.0.1-security",
+    "https": "^1.0.0",
     "pg": "^8.13.1",
     "pg-hstore": "^2.3.4",
     "reflect-metadata": "^0.2.2",
@@ -53,7 +54,7 @@
     "compile-debug": "run-s clean tsc start-debug",
     "dev": "nodemon",
     "debug": "nodemon --watch src --ext ts --exec 'npm run compile-debug'",
-    "build": "run-s clean tsc",
+    "build": "run-s clean && echo 'Starting TypeScript compilation...' && tsc && echo 'TypeScript compilation completed.'",
     "lint": "eslint src/",
     "lint:fix": "eslint --cache --fix src/ && prettier --write src/",
     "test": "jest",
